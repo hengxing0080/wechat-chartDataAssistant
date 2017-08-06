@@ -1,0 +1,528 @@
+/* ---------------------------------------------Size style extract--------------------------------------------- */
+
+/*include : width & height & margin & padding*/
+
+/* -----------------------width & height-------------------- */
+
+.width-height__percent100 {
+  width: 100%;
+  height: 100%;
+}
+
+.width-percent100 {
+  width: 100%;
+}
+
+.width__15 {
+  width: 15rpx;
+}
+
+.width__30 {
+  width: 30rpx;
+}
+
+.width__32 {
+  width: 32rpx;
+}
+
+.width__44 {
+  width: 44rpx;
+}
+
+.width__50 {
+  width: 50rpx;
+}
+
+.width__70 {
+  width: 70rpx;
+}
+
+.width__150 {
+  width: 150rpx;
+}
+
+.width__180 {
+  width: 180rpx;
+}
+
+.width__230 {
+  width: 230rpx;
+}
+
+.width__300 {
+  width: 300rpx;
+}
+
+.width__362_5 {
+  width: 362.5rpx;
+}
+
+.width__365 {
+  width: 365rpx;
+}
+
+.width__500 {
+  width: 500rpx;
+}
+
+.width__566 {
+  width: 566rpx;
+}
+
+.width__585 {
+  width: 585rpx;
+}
+
+.width__620 {
+  width: 620rpx;
+}
+
+.width__690 {
+  width: 690rpx;
+}
+
+.height-percent100 {
+  height: 100%;
+}
+
+.height__1 {
+  height: 1rpx;
+}
+
+.height__2 {
+  height: 2rpx;
+}
+
+.height__5 {
+  height: 5rpx;
+}
+
+.height__15 {
+  height: 15rpx;
+}
+
+.height__30 {
+  height: 30rpx;
+}
+
+.height__32 {
+  height: 32rpx;
+}
+
+.height__42 {
+  height: 32rpx;
+}
+
+.height__44 {
+  height: 44rpx;
+}
+
+.height__50 {
+  height: 50rpx;
+}
+
+.height__70 {
+  height: 70rpx;
+}
+
+.height__80 {
+  height: 80rpx;
+}
+
+.height__98 {
+  height: 98rpx;
+}
+
+.height__80 {
+  height: 80rpx;
+}
+
+.height__87 {
+  height: 87rpx;
+}
+
+.height__100 {
+  height: 100rpx;
+}
+
+.height__114 {
+  height: 114rpx;
+}
+
+.height__120 {
+  height: 120rpx;
+}
+
+.height__180 {
+  height: 180rpx;
+}
+
+.height__182_5 {
+  height: 182.5rpx;
+}
+
+.height__240 {
+  height: 240rpx;
+}
+
+.height__280 {
+  height: 280rpx;
+}
+
+.height__340 {
+  height: 340rpx;
+}
+
+.height__60 {
+  height: 60rpx;
+}
+
+.min-height__70 {
+  min-height: 70rpx;
+}
+
+/* ----------------------margin & padding-------------------- */
+
+.margin__0__20 {
+  margin: 0 20rpx;
+}
+
+.margin__0__30 {
+  margin: 0 30rpx;
+}
+
+.margin__0__60 {
+  margin: 0 60rpx;
+}
+
+.margin__30__20 {
+  margin: 30rpx 20rpx;
+}
+
+.margin__40__30 {
+  margin: 40rpx 30rpx;
+}
+
+.margin__40__60 {
+  margin: 40rpx 60rpx;
+}
+
+.margin__50__30 {
+  margin: 50rpx 30rpx;
+}
+
+.margin-top__3 {
+  margin-top: 3rpx;
+}
+
+.margin-top__10 {
+  margin-top: 10rpx;
+}
+
+.margin-top__15 {
+  margin-top: 15rpx;
+}
+
+.margin-top__20 {
+  margin-top: 20rpx;
+}
+
+.margin-top__30 {
+  margin-top: 30rpx;
+}
+
+.margin-top__40 {
+  margin-top: 40rpx;
+}
+
+.margin-top__54 {
+  margin-top: 54rpx;
+}
+
+.margin-top__60 {
+  margin-top: 60rpx;
+}
+
+.margin-top__80 {
+  margin-top: 80rpx;
+}
+
+.margin-top__100 {
+  margin-top: 100rpx;
+}
+
+.margin-top__200 {
+  margin-top: 200rpx;
+}
+
+.margin-left__5 {
+  margin-left: 5rpx;
+}
+
+.margin-left__10 {
+  margin-left: 10rpx;
+}
+
+.margin-left__20 {
+  margin-left: 20rpx;
+}
+
+.margin-left__30 {
+  margin-left: 30rpx;
+}
+
+.margin-left__35 {
+  margin-left: 35rpx;
+}
+
+.margin-left__60 {
+  margin-left: 60rpx;
+}
+
+.margin-right__10 {
+  margin-right: 10rpx;
+}
+
+.margin-right__20 {
+  margin-right: 20rpx;
+}
+
+.margin-right__30 {
+  margin-right: 30rpx;
+}
+
+.margin-right__50 {
+  margin-right: 50rpx;
+}
+
+.margin-right__60 {
+  margin-right: 60rpx;
+}
+
+.margin-bottom__10 {
+  margin-bottom: 10rpx;
+}
+
+.margin-bottom__15 {
+  margin-bottom: 15rpx;
+}
+
+.margin-bottom__20 {
+  margin-bottom: 20rpx;
+}
+
+.margin-bottom__30 {
+  margin-bottom: 30rpx;
+}
+
+.margin-bottom__40 {
+  margin-bottom: 40rpx;
+}
+
+.margin-bottom__50 {
+  margin-bottom: 50rpx;
+}
+
+.margin-bottom__100 {
+  margin-bottom: 100rpx;
+}
+
+.margin-bottom__120 {
+  margin-bottom: 120rpx;
+}
+
+.padding__0__30 {
+  padding: 0 30rpx;
+}
+
+.padding__0__60 {
+  padding: 0 60rpx;
+}
+
+.padding__15__15 {
+  padding: 15rpx 15rpx;
+}
+
+.padding__20__30 {
+  padding: 20rpx 30rpx;
+}
+
+.padding__26__30 {
+  padding: 26rpx 30rpx;
+}
+
+.padding__30__60__20__60 {
+  padding: 30rpx 60rpx 20rpx 60rpx;
+}
+
+.padding__30__0 {
+  padding: 30rpx 0;
+}
+
+.padding__30__20 {
+  padding: 30rpx 20rpx;
+}
+
+.padding__30__30 {
+  padding: 30rpx 30rpx;
+}
+
+.padding__30__60 {
+  padding: 30rpx 60rpx;
+}
+
+.padding__40__0 {
+  padding: 40rpx 0;
+}
+
+.padding__40__15 {
+  padding: 40rpx 15rpx;
+}
+
+.padding__40__30 {
+  padding: 40rpx 30rpx;
+}
+
+.padding__40__60 {
+  padding: 40rpx 60rpx;
+}
+
+.padding__50__30 {
+  padding: 50rpx 30rpx;
+}
+
+.padding__50__60 {
+  padding: 50rpx 60rpx;
+}
+
+.padding__90__30 {
+  padding: 90rpx 30rpx;
+}
+
+.padding__50__30__30 {
+  padding: 50rpx 30rpx 30rpx;
+}
+
+.padding__40__40__40__60 {
+  padding: 40rpx 40rpx 40rpx 60rpx;
+}
+
+.padding-top__10 {
+  padding-top: 10rpx;
+}
+
+.padding-top__15 {
+  padding-top: 15rpx;
+}
+
+.padding-top__20 {
+  padding-top: 20rpx;
+}
+
+.padding-top__22 {
+  padding-top: 22rpx;
+}
+
+.padding-top__30 {
+  padding-top: 30rpx;
+}
+
+.padding-top__40 {
+  padding-top: 40rpx;
+}
+
+.padding-top__50 {
+  padding-top: 50rpx;
+}
+
+.padding-top__60 {
+  padding-top: 60rpx;
+}
+
+.padding-top__100 {
+  padding-top: 100rpx;
+}
+
+.padding-top__120 {
+  padding-top: 120rpx;
+}
+
+.padding-bottom__10 {
+  padding-bottom: 10rpx;
+}
+
+.padding-bottom__20 {
+  padding-bottom: 20rpx;
+}
+
+.padding-bottom__30 {
+  padding-bottom: 30rpx;
+}
+
+.padding-bottom__40 {
+  padding-bottom: 40rpx;
+}
+
+.padding-bottom__50 {
+  padding-bottom: 50rpx;
+}
+
+.padding-bottom__70 {
+  padding-bottom: 70rpx;
+}
+
+.padding-bottom__80 {
+  padding-bottom: 80rpx;
+}
+
+.padding-bottom_99 {
+  padding-bottom: 99rpx;
+}
+
+.padding-bottom__100 {
+  padding-bottom: 100rpx;
+}
+
+.padding-bottom__120 {
+  padding-bottom: 120rpx;
+}
+
+.padding-left__10 {
+  padding-left: 10rpx;
+}
+
+.padding-left__15 {
+  padding-left: 15rpx;
+}
+
+.padding-left__20 {
+  padding-left: 20rpx;
+}
+
+.padding-left__30 {
+  padding-left: 30rpx;
+}
+
+.padding-left__40 {
+  padding-left: 40rpx;
+}
+
+.padding-left__60 {
+  padding-left: 60rpx;
+}
+
+.padding-right__10 {
+  padding-right: 10rpx;
+}
+
+.padding-right__20 {
+  padding-right: 20rpx;
+}
+
+.padding-right__30 {
+  padding-right: 30rpx;
+}
+
+.padding-right__40 {
+  padding-right: 40rpx;
+}

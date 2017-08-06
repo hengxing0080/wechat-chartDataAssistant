@@ -1,0 +1,37 @@
+<view class="flex__col bg-color__192429">
+  <view class="margin-left__20 margin-right__20 margin-top__20 radius_top_10 bg-color__121C26 ">
+    <view class="flex__row">
+      <view class="width__362_5 height__240 flex__col justify-content__center align-items__center " hover hover-class="cell-hover" bindtap="startBrokenline">
+        <image class="icon__64" src="/images/icon-home-brokenline.png" mode="aspectFill" />
+        <text class="margin-top__10 color__78979A font-size__medium line-height__42">折线图</text>
+      </view>
+      <view>
+        <canvas canvas-id="canvas-gradient-top" style="width:5rpx;height:230rpx;" />
+      </view>
+      <view class="width__362_5 height__240 flex__col justify-content__center align-items__center " hover hover-class="cell-hover" bindtap="startAnnulus">
+        <image class="icon__64" src="/images/icon-home-annulus.png" mode="aspectFill" />
+        <text class="margin-top__10 color__78979A font-size__medium line-height__42">圆环图</text>
+      </view>
+    </view>
+  </view>
+  <view class="margin-left__20  margin-right__20 flex__row justify-content__space-between align-items__center bg-color__121C26">
+    <canvas canvas-id="canvas-gradient-left" style="width:335rpx;height:5rpx;" />
+    <view class="bg-color__03FCFE radius__5" style="width:10rpx;height:10rpx;" />
+    <canvas canvas-id="canvas-gradient-right" style="width:335rpx;height:5rpx;" />
+  </view>
+  <view class="margin__0__20 radius_bottom_10 bg-color__121C26 ">
+    <view class="flex__row">
+      <view class="width__365 height__240 flex__col justify-content__center align-items__center " hover hover-class="cell-hover" bindtap="startColumnar">
+        <image class="icon__64" src="/images/icon-home-columnar.png" mode="aspectFill" />
+        <text class="margin-top__10 color__78979A font-size__medium line-height__42">柱状图</text>
+      </view>
+      <view>
+        <canvas canvas-id="canvas-gradient-bottom" style="width:5rpx;height:240rpx;" />
+      </view>
+      <view class="width__365 height__240 flex__col justify-content__center align-items__center " hover hover-class="cell-hover" bindtap="startStriptype">
+        <image class="icon__64" src="/images/icon-home-striptype.png" mode="aspectFill" />
+        <text class="margin-top__10 color__78979A font-size__medium line-height__42">条形图</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="margin-left__20 margin-right__20">
+  <view class="color__white font-size__medium margin-top__10">
+    <text>用户年龄分布</text>
+  </view>
+  <canvas canvas-id="age-canvas" id="age-canvas" />
+</view>

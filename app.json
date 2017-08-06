@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/analyze/analyze",
+    "pages/analyze/brokenline/brokenline",
+    "pages/analyze/annulus/annulus",
+    "pages/analyze/columnar/columnar",
+    "pages/analyze/stricptype/stricptype"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#192429",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "数据可视化分析",
+    "backgroundColor": "#192429",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "disableScroll": false
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": true
+}

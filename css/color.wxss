@@ -1,0 +1,101 @@
+/* ---------------------------------------------Color--------------------------------------------- */
+
+/* -----------------------Background color----------------- */
+
+.bg-color__white {
+  background-color: white;
+}
+
+.bg-color__black {
+  background-color: black;
+}
+
+.bg-color__blue {
+  background-color: #166ddd;
+}
+
+.bg-color__gray {
+  background-color: #e5e5e5;
+}
+
+.bg-color__red {
+  background-color: #f04141;
+}
+
+.bg-color__yellow {
+  background-color: #ffbf00;
+}
+
+.bg-color__fafafa {
+  background-color: #fafafa;
+}
+
+.bg-color__search {
+  background-color: #f6f6f6;
+}
+
+.bg-color__translucent {
+  background: rgba(0, 0, 0, 0.50);
+}
+
+.bg-color__192429 {
+  background-color: #192429;
+}
+
+.bg-color__121C26 {
+  background-color: #121c26;
+}
+
+.bg-color__03FCFE {
+  background-color: #03fcfe;
+}
+
+.bg-color__27A5C2 {
+  background-color: #27a5c2;
+}
+
+.bg-color__1E3A50 {
+  background-color: #1e3a50;
+}
+
+/* -----------------------Font color----------------- */
+
+.color__black {
+  color: black;
+}
+
+.color__white {
+  color: white;
+}
+
+.color__blue {
+  color: #166ddd;
+}
+
+.color__yellow {
+  color: #ffbf00;
+}
+
+.color__dark {
+  color: #353535;
+}
+
+.color__gray {
+  /*color: #b2b2b2;*/
+  color: #9b9b9b;
+}
+
+.color__lightgray {
+  /*color: #b2b2b2;*/
+  color: #e5e5e5;
+}
+
+.color__78979A {
+  /*color: #b2b2b2;*/
+  color: #78979a;
+}
+
+.color__87A9AB {
+  /*color: #b2b2b2;*/
+  color: #87a9ab;
+}

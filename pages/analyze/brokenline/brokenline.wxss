@@ -1,0 +1,5 @@
+#line-canvas {
+  width: 355px;
+  height: 200px;
+  background: #192429;
+}

@@ -1,0 +1,141 @@
+/* ---------------------------------------------Font style extract--------------------------------------------- */
+
+/* -----------------------Font color----------------- */
+
+.color__black {
+  color: black;
+}
+
+.color__white {
+  color: white;
+}
+
+.color__blue {
+  color: #166ddd;
+}
+
+.color__yellow {
+  color: #ffbf00;
+}
+
+.color__dark {
+  /*color: #353535;*/
+  color: black;
+}
+
+.color__gray {
+  /*color: #b2b2b2;*/
+  color: #9b9b9b;
+}
+
+.color__lightgray {
+  /*color: #b2b2b2;*/
+  color: #e5e5e5;
+}
+
+/* -----------------------Font size----------------- */
+
+.font-size__x-large {
+  font-size: 44rpx;
+}
+
+.font-size__large {
+  font-size: 36rpx;
+}
+
+.font-size__medium {
+  font-size: 30rpx;
+}
+
+.font-size__normal {
+  font-size: 26rpx;
+}
+
+.font-size__x-small {
+  font-size: 20rpx;
+}
+
+/* -----------------------Font weight----------------- */
+
+.font__bold {
+  font-weight: bold;
+}
+
+.font__bolder {
+  font-weight: bolder;
+}
+
+/* -----------------------Font whether newline----------------- */
+
+.font-nowrap {
+  display: block;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.font-nowrap__2lines {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.font-nowrap__3lines {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.white-space__nowrap {
+  white-space: nowrap;
+}
+
+.word-break__break-all {
+  word-break: break-all;
+}
+
+/* ----------------------line-height-------------------- */
+
+.line-height__1-6 {
+  line-height: 1.6;
+}
+
+.line-height__30 {
+  line-height: 30rpx;
+}
+
+.line-height__32 {
+  line-height: 32rpx;
+}
+
+.line-height__37 {
+  line-height: 37rpx;
+}
+
+.line-height__38 {
+  line-height: 38rpx;
+}
+
+.line-height__40 {
+  line-height: 40rpx;
+}
+
+.line-height__42 {
+  line-height: 42rpx;
+}
+
+.line-height__50 {
+  line-height: 50rpx;
+}
+
+.line-height__62 {
+  line-height: 62rpx;
+}

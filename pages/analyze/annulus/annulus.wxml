@@ -1,0 +1,6 @@
+<view class="margin-left__20 margin-right__20">
+  <view class="font-size__medium margin-top__10">
+    <text>活跃用户</text>
+  </view>
+  <canvas canvas-id="gender-canvas" id="gender-canvas" />
+</view>
