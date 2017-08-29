@@ -4,11 +4,11 @@
 
 # Effect
 
-![index](http://osuvlqnlu.bkt.clouddn.com/index.bmp)
-![line](http://osuvlqnlu.bkt.clouddn.com/line.bmp)
-![ring](http://osuvlqnlu.bkt.clouddn.com/ring.bmp)
-![column](http://osuvlqnlu.bkt.clouddn.com/column.bmp)
-![bar](http://osuvlqnlu.bkt.clouddn.com/bar.bmp)
+![index](https://raw.githubusercontent.com/hengxing0080/wechat-chartDataAssistant/master/images/index.bmp)
+![line](https://raw.githubusercontent.com/hengxing0080/wechat-chartDataAssistant/master/images/line.bmp)
+![ring](https://raw.githubusercontent.com/hengxing0080/wechat-chartDataAssistant/master/images/ring.bmp)
+![column](https://raw.githubusercontent.com/hengxing0080/wechat-chartDataAssistant/master/images/column.bmp)
+![bar](https://raw.githubusercontent.com/hengxing0080/wechat-chartDataAssistant/master/images/bar.bmp)
 
 # 现支持图表类型
 - 线性图  line
