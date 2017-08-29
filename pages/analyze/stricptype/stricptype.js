@@ -1,9 +1,10 @@
+var dimen = require("../../../utils/dimen.js");
 var data = require('../../../data/daily.js');
 
 const context_striptype = wx.createCanvasContext('striptype-canvas');
 
 // y轴放大倍数
-var ratioY = 4;
+var ratioY = 0;
 
 // 紫色
 var purple = '#7E8FDD';
@@ -20,6 +21,30 @@ var lightOrange = '#DAD7DC';
 // 板岩暗蓝灰色
 var SlateBlue = '#6A5ACD';
 
+var maxStringLenth = 0;
+
+var Timing = {
+  easeIn: function easeIn(pos) {
+    return Math.pow(pos, 3);
+  },
+
+  easeOut: function easeOut(pos) {
+    return Math.pow(pos - 1, 3) + 1;
+  },
+
+  easeInOut: function easeInOut(pos) {
+    if ((pos /= 0.5) < 1) {
+      return 0.5 * Math.pow(pos, 3);
+    } else {
+      return 0.5 * (Math.pow(pos - 2, 3) + 2);
+    }
+  },
+
+  linear: function linear(pos) {
+    return pos;
+  }
+};
+
 Page({
   data: {
     canvasHeight_striptype: 200, // 条形图的画布高度
@@ -27,14 +52,26 @@ Page({
   },
 
   onLoad: function () {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        dimen.init(res.windowWidth);
+        var height = dimen.rpx2px(400);          // 条形图的画布高度
+        that.setData({
+          canvasHeight_striptype: height
+        });
+      }
+    });
+
     this.loadForVisitDistribution();
   },
 
   loadForVisitDistribution: function () {
-    this.drawScriptType(data.visitDistribution);
+    this.drawScricptype(data.visitDistribution);
   },
 
-  drawScriptType: function (list) {
+  drawScricptype: function (list) {
+    var that = this;
     var canvasHeight = this.data.canvasHeight_striptype;
     if (list.length > 10) {
       canvasHeight = list.length * 20;
@@ -46,11 +83,29 @@ Page({
       ratioY = (canvasHeight) / list.length;
     }
 
-    // 画左侧文字
+    this.drawText(list);
+    this.drawLine(canvasHeight);
+
+    this.Animation({
+      timing: 'easeIn',
+      duration: 1000,
+      onProcess: function onProcess(process) {
+        that.drawStricptype(list, process);
+        that.draw();
+      },
+      onAnimationFinish: function onAnimationFinish() {
+        that.drawStricptypeNum(list);
+        that.drawpercent(list);
+        that.draw();
+      }
+    });
+  },
+
+  // 画左侧文字
+  drawText: function (list){
     var source = '';
-    var maxStringLenth = 0;
     context_striptype.setFillStyle('#5A8DA7');
-    context_striptype.setFontSize(12);
+    context_striptype.setFontSize(dimen.rpx2px(24));
     list.forEach(function (data, i, array) {
       switch (data.key) {
         case 1:
@@ -109,41 +164,114 @@ Page({
         default:
           break;
       }
-      context_striptype.fillText(source, 0, i * ratioY + 20);
+      context_striptype.fillText(source, 0, i * ratioY + dimen.rpx2px(30));
       if (source.toString().length > maxStringLenth) {
         maxStringLenth = source.toString().length;
       }
     });
+  },
 
-    // 画竖线
+  // 画竖线
+  drawLine: function (canvasHeight) {
     context_striptype.beginPath();
     context_striptype.setStrokeStyle(gray);
-    context_striptype.setLineWidth(1);
-    context_striptype.moveTo(maxStringLenth * 13, canvasHeight);
-    context_striptype.lineTo(maxStringLenth * 13, 10);
+    context_striptype.setLineWidth(dimen.rpx2px(2));
+    context_striptype.moveTo(maxStringLenth * dimen.rpx2px(26), canvasHeight);
+    context_striptype.lineTo(maxStringLenth * dimen.rpx2px(26), dimen.rpx2px(10));
     context_striptype.stroke();
+  },
 
-    // 画条形图和数量
+  // 画条形图
+  drawStricptype: function (list, process) {
     context_striptype.setFillStyle('#00EFFE');
-    context_striptype.setFontSize(12);
     list.forEach(function (data, i, array) {
-      context_striptype.fillRect(maxStringLenth * 13 + 1, i * ratioY + 11, data.value < 200 ? data.value : 200, 10)
-      context_striptype.fillText(data.value, maxStringLenth * 13 + 5 + (data.value < 200 ? data.value : 200), i * ratioY + 20);
+      var width = data.value < 200 ? data.value : dimen.rpx2px(400);
+      width *= process;
+      context_striptype.fillRect(
+        maxStringLenth * dimen.rpx2px(26) + dimen.rpx2px(2),
+        i * ratioY + dimen.rpx2px(12),
+        width,
+        dimen.rpx2px(20));
     });
+  },
 
-    // 画百分比
+  // 画条形图数值
+  drawStricptypeNum: function (list) {
+    context_striptype.setFontSize(dimen.rpx2px(24));
+    list.forEach(function (data, i, array) {
+      context_striptype.fillText(data.value,
+        maxStringLenth * dimen.rpx2px(26) + dimen.rpx2px(10) + (data.value < 200 ? data.value : dimen.rpx2px(400)),
+        i * ratioY + dimen.rpx2px(30));
+    });
+  },
+
+  // 画百分比
+  drawpercent: function (list) {
     var totalSouce = 0;
     list.forEach(function (data, i, array) {
       totalSouce += data.value;
     });
     context_striptype.setFillStyle('white');
     list.forEach(function (data, i, array) {
-      context_striptype.fillText(((Math.floor(data.value * 10000 / totalSouce) / 100).toFixed(1) + '%'),
-        maxStringLenth * 13 + 30 + (data.value < 200 ? data.value : 200),
-        i * ratioY + 20);
+      context_striptype.fillText(
+        (Math.floor(data.value * 10000 / totalSouce) / 100).toFixed(1) + '%',
+        maxStringLenth * dimen.rpx2px(26) + dimen.rpx2px(60) + (data.value < 200 ? data.value : dimen.rpx2px(400)),
+        i * ratioY + dimen.rpx2px(30));
     });
+  },
 
-    // 画出来
-    context_striptype.draw();
+  // 画
+  draw: function () {
+    context_striptype.draw(true);
+  },
+
+  Animation: function (opts) {
+    this.isStop = false;
+    opts.duration = typeof opts.duration === 'undefined' ? 1000 : opts.duration;
+    opts.timing = opts.timing || 'linear';
+
+    var delay = 17;
+
+    var createAnimationFrame = function createAnimationFrame() {
+      if (typeof requestAnimationFrame !== 'undefined') {
+        return requestAnimationFrame;
+      } else if (typeof setTimeout !== 'undefined') {
+        return function (step, delay) {
+          setTimeout(function () {
+            var timeStamp = +new Date();
+            step(timeStamp);
+          }, delay);
+        };
+      } else {
+        return function (step) {
+          step(null);
+        };
+      }
+    };
+    var animationFrame = createAnimationFrame();
+    var startTimeStamp = null;
+    var _step = function step(timestamp) {
+      if (timestamp === null || this.isStop === true) {
+        opts.onProcess && opts.onProcess(1);
+        opts.onAnimationFinish && opts.onAnimationFinish();
+        return;
+      }
+      if (startTimeStamp === null) {
+        startTimeStamp = timestamp;
+      }
+      if (timestamp - startTimeStamp < opts.duration) {
+        var process = (timestamp - startTimeStamp) / opts.duration;
+        var timingFunction = Timing[opts.timing];
+        process = timingFunction(process);
+        opts.onProcess && opts.onProcess(process);
+        animationFrame(_step, delay);
+      } else {
+        opts.onProcess && opts.onProcess(1);
+        opts.onAnimationFinish && opts.onAnimationFinish();
+      }
+    };
+    _step = _step.bind(this);
+
+    animationFrame(_step, delay);
   }
 })

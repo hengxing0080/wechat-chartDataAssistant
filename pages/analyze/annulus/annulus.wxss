@@ -1,6 +1,6 @@
 /*画布*/
 #age-canvas {
-	width: 355px;
-	height: 200px;
-	background: #FFFFFF;
+  width: 710rpx;
+  height: 400rpx;
+  background: #fff;
 }

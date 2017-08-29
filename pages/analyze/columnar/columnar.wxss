@@ -1,5 +1,5 @@
 #age-canvas {
-	width: 355px;
-	height: 200px;
+	width: 710rpx;
+	height: 400rpx;
 	background: #192429;
 }

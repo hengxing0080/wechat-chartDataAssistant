@@ -2,5 +2,5 @@
   <view class="margin-top__30 margin-bottom__20 font-size__large">
     <text>近30天访问来源</text>
   </view>
-  <canvas canvas-id="striptype-canvas" id="striptype-canvas" style="height:{{canvasHeight_striptype}}px;"/>
+  <canvas canvas-id="striptype-canvas" id="striptype-canvas" style="height:{{canvasHeight_striptype}}px;"/> 
 </view>
